@@ -1,0 +1,77 @@
+service: sls-fauna-saas-workshop
+frameworkVersion: '3'
+ 
+plugins:
+  - serverless-plugin-typescript
+  - serverless-offline
+
+custom:
+  env: ${file(./.env.json)}
+
+provider:
+  name: aws
+  deploymentMethod: direct
+  runtime: nodejs18.x
+  profile: ${self:custom.env.AWS_PROFILE}
+  region: ${self:custom.env.AWS_REGION}
+  stage: ${self:custom.env.ENVIRONMENT}
+  environment:
+    FAUNA_API_KEY: ${self:custom.env.FAUNA_API_KEY}
+    ALGOLIA_APP_ID: ${self:custom.env.ALGOLIA_APP_ID}
+    ALGOLIA_API_KEY: ${self:custom.env.ALGOLIA_API_KEY}
+    ALGOLIA_SEARCH_ONLY_KEY: ${self:custom.env.ALGOLIA_SEARCH_ONLY_KEY}
+    ISSUER: ${self:custom.env.ISSUER}
+  httpApi:
+    cors: true
+    authorizers:
+      customAuthorizer:
+        type: request
+        functionName: auth0Authorizer
+
+functions:
+  # Authorizer
+  auth0Authorizer:
+    handler: authorizer/auth.handler
+
+  hello:
+    handler: index.handler
+    events:
+      - httpApi:
+          path: /
+          method: GET
+  createProduct:
+    handler: ProductService/productservice.createProduct
+    events:
+      - httpApi:
+          path: /product
+          method: POST
+          authorizer:
+            name: customAuthorizer
+            type: request
+  getProducts:
+    handler: ProductService/productservice.getProducts
+    events:
+      - httpApi:
+          path: /products
+          method: GET
+          authorizer:
+            name: customAuthorizer
+            type: request
+  getOrders:
+    handler: OrderService/orderservice.getOrders
+    events:
+      - httpApi:
+          path: /orders
+          method: GET
+          authorizer:
+            name: customAuthorizer
+            type: request
+  createOrder:
+    handler: OrderService/orderservice.createOrder
+    events:
+      - httpApi:
+          path: /order
+          method: POST
+          authorizer:
+            name: customAuthorizer
+            type: request

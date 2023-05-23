@@ -1,0 +1,12 @@
+{
+  "name": "sls-fauna-saas-workshop-load-script",
+  "version": "1.0.0",
+  "description": "",
+  "main": "load.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "zee.khoo@fauna.com",
+  "license": "MIT-0"
+}
