@@ -2,8 +2,7 @@ const AuthPolicy = require('aws-auth-policy');
 const jwt = require('jsonwebtoken');
 const jwksClient = require('jwks-rsa');
 
-const ISSUER = process.env.ISSUER;
-const JWKS_URI = `${ISSUER}.well-known/jwks.json`;
+const JWKS_URI = process.env.JWKS_URI;
 
 const keyClient = jwksClient({
   cache: true,

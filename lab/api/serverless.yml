@@ -1,4 +1,4 @@
-service: sls-fauna-saas-workshop
+service: sls-fauna-saas-algolia-workshop
 frameworkVersion: '3'
  
 plugins:
@@ -20,6 +20,7 @@ provider:
     ALGOLIA_APP_ID: ${self:custom.env.ALGOLIA_APP_ID}
     ALGOLIA_API_KEY: ${self:custom.env.ALGOLIA_API_KEY}
     ALGOLIA_SEARCH_ONLY_KEY: ${self:custom.env.ALGOLIA_SEARCH_ONLY_KEY}
+    JWKS_URI: ${self:custom.env.JWKS_URI}
   httpApi:
     cors: true
     authorizers:

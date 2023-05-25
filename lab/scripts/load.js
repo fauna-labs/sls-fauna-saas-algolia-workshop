@@ -4,7 +4,7 @@ import { products, orders} from './data.js';
 async function loadDocuments(collection, data) {  
   try {
     for (const doc of data.data) {
-      const res = await fetch(`https://9tij28wnf4.execute-api.us-west-2.amazonaws.com/${collection}`, {
+      const res = await fetch(`http://localhost:3000/${collection}`, {
         method: 'POST',
         body: JSON.stringify(doc)
       })
