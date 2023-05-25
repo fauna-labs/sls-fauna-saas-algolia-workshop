@@ -36,3 +36,8 @@ You will need:
 
 ## Next Step
 Navigate to the [/solution](/solution) folder, and follow the [README](/solution/README.md) to set up all the services for the demo solution.
+
+
+[fauna]: https://www.fauna.com/
+[fauna-labs]: https://github.com/fauna-labs
+[fauna-organization]: https://github.com/fauna
