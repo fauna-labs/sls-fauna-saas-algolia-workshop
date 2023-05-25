@@ -1,3 +1,6 @@
+// Copyright Fauna, Inc.
+// SPDX-License-Identifier: MIT-0
+
 import { Handler, Context, Callback } from 'aws-lambda';
 
 interface Response {

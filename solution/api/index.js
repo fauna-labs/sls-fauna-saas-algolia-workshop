@@ -1,3 +1,6 @@
+// Copyright Fauna, Inc.
+// SPDX-License-Identifier: MIT-0
+
 module.exports.handler = async (event) => {
   return {
     statusCode: 200,

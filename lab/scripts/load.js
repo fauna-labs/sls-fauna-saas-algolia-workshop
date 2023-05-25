@@ -1,5 +1,7 @@
-import { products, orders} from './data.js';
+// Copyright Fauna, Inc.
+// SPDX-License-Identifier: MIT-0
 
+import { products, orders} from './data.js';
 
 async function loadDocuments(collection, data) {  
   try {

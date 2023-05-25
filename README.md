@@ -1,3 +1,7 @@
+This repository contains unofficial patterns, sample code, or tools to help developers build more effectively with [Fauna][fauna]. All [Fauna Labs][fauna-labs] repositories are provided “as-is” and without support. By using this repository or its contents, you agree that this repository may never be officially supported and moved to the [Fauna organization][fauna-organization].
+
+---
+
 # Serverless SaaS With Fauna and Algolia
 
 This is the project that accompanied [this Algolia LiveCoding session](https://youtu.be/JLtI1URRXG8)

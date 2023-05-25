@@ -1,3 +1,6 @@
+// Copyright Fauna, Inc.
+// SPDX-License-Identifier: MIT-0
+
 const AuthPolicy = require('aws-auth-policy');
 const jwt = require('jsonwebtoken');
 const jwksClient = require('jwks-rsa');
