@@ -24,6 +24,17 @@
     ```
   * Copy the value of your key's **secret** to a temporary location. You may not see it again if you clear the shell
     or start a new session.
+* Create 2 child databases.
+  * Click on the plus (+) sign next to *Databases* in the left pane tree navigator to add the databases.
+  * Add 2 databases with the names **tenantA** and **tenantB**, as shown below.
+
+    <img src="../images/CreateChildDB.png" width="400">
+  
+* Navigate into each of the child databases to create 2 collections in each database:
+  * Click on the plus (+) sign next to *Collections* in the left pane tree navigator to add the collections:
+  * Add collections **order** and **product**, as shown below
+  
+    <img src="../images/CreateCollections.png" width="400">
 
 ### Obtain Algolia Keys
 * Login to the dashboard
