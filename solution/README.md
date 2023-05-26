@@ -86,7 +86,7 @@
       ```
       <img src="../images/ActionCode.png" width="600">
   * Click **Deploy**
-* Return to the flow page
+* Return to the Login flow page
 * Drag the custom action box into the flow
   
     <img src="../images/Drag.png" width="500">
@@ -94,23 +94,28 @@
 * Click **Apply**
 
 #### Create a couple logins
-* From the left menu panel, nagigate to User Management > Users
+* From the left menu panel, navigate to User Management > Users
 * Create a couple users so that you can login later:
   * User "A"
+    * Configure however way you wish to authenticate with this user.
     * Populate the users' **Metadata** with the following value:
       ```
       {
         "tenantId": "tenantA"
       }
       ```
-  * User "B"
+      Here's a sample screenshot of where that metadata is in the UI:
+
+      <img src="../images/UserMetadata.png" width="400">
+
+  * User "B"...do the same as with User "A"
+    * Configure however way you wish to authenticate with this user.
     * Populate the users' **Metadata** with the following value:
       ```
       {
         "tenantId": "tenantB"
       }
       ```
-    <img src="../images/UserMetadata.png" width="400">
 
 ## Next Step
 Navigate to the [/solution/api](/solution/api) folder, and follow the [README](/solution/api/README.md) to configure serverless.
