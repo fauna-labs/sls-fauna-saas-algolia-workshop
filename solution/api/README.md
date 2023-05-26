@@ -48,6 +48,7 @@ Rename the `.env.json.example` file to `.env.json`
 
 
 ### Deployment
+In the folder, run the command
 ```
 $ serverless deploy
 ```
@@ -71,7 +72,7 @@ functions:
 
 ### Client Setup
 * Navigate to the [/solution/cliet-multitenant](/solution/client-multitenant) folder
-* Create a `.env` file with the necessary environment variables:
+* While in that folder, create a `.env` file with the necessary environment variables:
     ```
     VITE_APP_APIGATEWAYURL=<API Gateway URL>
     VITE_APP_AUTH0_DOMAIN=<Auth0 Domain>
